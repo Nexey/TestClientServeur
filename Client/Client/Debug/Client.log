@@ -1,2 +1,5 @@
-﻿  Main.cpp
+﻿  Client.cpp
+  Main.cpp
+  VisiteurClientSocket.cpp
+  Génération de code en cours...
   Client.vcxproj -> C:\Users\lelia\Documents\Projets Visual\TestClientServeur\Client\Debug\Client.exe

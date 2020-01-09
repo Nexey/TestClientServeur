@@ -2,7 +2,7 @@
 
 #include "./Client/Client.h"
 #include "./Exceptions/Erreur.h"
-#include "./VisiteurClientSocket.h"
+#include "./Visiteurs/VisiteurClientSocket.h"
 
 #pragma comment(lib, "Ws2_32.lib")
 

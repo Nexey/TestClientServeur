@@ -45,11 +45,11 @@
     <ClCompile Include="Exceptions\Erreur.cpp">
       <Filter>Fichiers sources\Exceptions</Filter>
     </ClCompile>
-    <ClCompile Include="IVisiteur.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="Visiteurs\VisiteurClientSocket.cpp">
+      <Filter>Fichiers sources\Visiteurs</Filter>
     </ClCompile>
-    <ClCompile Include="VisiteurClientSocket.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="Visiteurs\IVisiteur.cpp">
+      <Filter>Fichiers sources\Visiteurs</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -62,11 +62,11 @@
     <ClInclude Include="Exceptions\Erreur.h">
       <Filter>Fichiers d%27en-tête\Exceptions</Filter>
     </ClInclude>
-    <ClInclude Include="IVisiteur.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="Visiteurs\VisiteurClientSocket.h">
+      <Filter>Fichiers d%27en-tête\Visiteurs</Filter>
     </ClInclude>
-    <ClInclude Include="VisiteurClientSocket.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="Visiteurs\IVisiteur.h">
+      <Filter>Fichiers d%27en-tête\Visiteurs</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

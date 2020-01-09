@@ -9,7 +9,7 @@
 #include <string>
 #include <string.h>
 #include "MaWinsock.h"
-#include "../IVisiteur.h"
+#include "../Visiteurs/IVisiteur.h"
 
 class Client {
 	SOCKADDR_IN sockaddr; // informations concernant le serveur avec lequel on va communiquer
@@ -20,8 +20,6 @@ public:
 
 	Client(const std::string & adresseServeur, const int portServeur);
 	~Client();
-
-	// void sendSocket(const std::string& req);
 
 	bool accepte(IVisiteur* visiteur);
 };
