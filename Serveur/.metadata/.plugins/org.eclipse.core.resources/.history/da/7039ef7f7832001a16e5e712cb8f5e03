@@ -1,0 +1,65 @@
+package serveur;
+
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.net.Socket;
+
+/**
+
+ */
+public class WorkerRunnable implements Runnable {
+	public static int itemCount = 1;
+	protected Socket clientSocket = null;
+	protected String serverText = null;
+	protected int numClient;
+	
+	// Constructeur de base
+	// itemCount est pour identifier chaque client
+	public WorkerRunnable(Socket clientSocket, String serverText) {
+		this.clientSocket = clientSocket;
+		this.serverText = serverText;
+		this.numClient = WorkerRunnable.itemCount;
+		System.out.println(this.chat("Connecté !"));
+		WorkerRunnable.itemCount++;
+	}
+	
+	// Permet d'afficher un message en sachant la provenance 
+	public String chat(String msg) {
+		return "Client n°" + this.numClient + " : " + msg;
+	}
+	
+	// WorkerRunnable implémente Runnable, il y a donc sans surprise une méthode run
+	public void run() {
+		// Le stream d'input : Il lit la socket directement
+		InputStream input = null;
+		
+		// On récupère le résultat de la socket dans un BufferedReader qui lui même contient un InputStreamReader pointant sur l'InputStream
+		BufferedReader in;
+
+		// On convertir le résultat dans un String, que l'on peut manipuler 
+		String inputLine;
+		try {
+			input = clientSocket.getInputStream();
+			in = new BufferedReader(new InputStreamReader(input));
+			while (null != (inputLine = in.readLine())) {
+				if (!inputLine.equals(""))
+					System.out.println(this.chat(inputLine));
+			}
+
+			System.out.println(this.chat("Connexion finie."));
+		} catch (IOException e) {
+			System.out.println(this.chat("Connexion rompue !"));
+		} finally {
+			OutputStream output;
+			try {
+				output = clientSocket.getOutputStream();
+				output.close();
+				input.close();
+			} catch (IOException e) {
+			}
+		}
+	}
+}

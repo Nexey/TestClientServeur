@@ -1,0 +1,56 @@
+package serveur;
+
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.net.Socket;
+import java.net.SocketException;
+
+/**
+
+ */
+public class WorkerRunnable implements Runnable {
+	public static int itemCount = 1;
+	protected Socket clientSocket = null;
+	protected String serverText = null;
+	protected int numClient;
+
+	public WorkerRunnable(Socket clientSocket, String serverText) {
+		this.clientSocket = clientSocket;
+		this.serverText = serverText;
+		this.numClient = WorkerRunnable.itemCount;
+		WorkerRunnable.itemCount++;
+	}
+	
+	public String chat(String msg) {
+		return "Client n°" + this.numClient + " : ";
+	}
+
+	public void run() {
+		String inputLine;
+		InputStream input = null;
+		BufferedReader in;
+		try {
+			input = clientSocket.getInputStream();
+			in = new BufferedReader(new InputStreamReader(input));
+			while (null != (inputLine = in.readLine())) {
+				if (!inputLine.equals(""))
+					System.out.println(this.chat(inputLine));
+			}
+			
+			System.out.println(this.chat("Connexion finie."));
+		} catch (IOException e) {
+			System.out.println(this.chat("Connexion rompue !"));
+		} finally {
+			OutputStream output;
+			try {
+				output = clientSocket.getOutputStream();
+				output.close();
+				input.close();
+			} catch (IOException e) {
+			}
+		}
+	}
+}

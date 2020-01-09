@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Client">
+      <UniqueIdentifier>{0fb64edb-d68b-4393-9ac1-49074cd639c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Exceptions">
+      <UniqueIdentifier>{a3ea8109-feca-4113-abda-f3947271bfaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Client">
+      <UniqueIdentifier>{3c4c4787-d134-4e9f-a2a5-c79f52873049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Exceptions">
+      <UniqueIdentifier>{e64d2d37-7835-4d37-b4f3-3a2ef5ffd1cf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Client\Client.cpp">
+      <Filter>Fichiers sources\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="Client\MaWinsock.cpp">
+      <Filter>Fichiers sources\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="Exceptions\Erreur.cpp">
+      <Filter>Fichiers sources\Exceptions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Client\Client.h">
+      <Filter>Fichiers d%27en-tête\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="Client\MaWinsock.h">
+      <Filter>Fichiers d%27en-tête\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="Exceptions\Erreur.h">
+      <Filter>Fichiers d%27en-tête\Exceptions</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
