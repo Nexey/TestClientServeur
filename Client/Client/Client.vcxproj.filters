@@ -25,6 +25,12 @@
     <Filter Include="Fichiers sources\Exceptions">
       <UniqueIdentifier>{e64d2d37-7835-4d37-b4f3-3a2ef5ffd1cf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Visiteurs">
+      <UniqueIdentifier>{65447d70-6b12-41ae-8433-c34d01e33491}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Visiteurs">
+      <UniqueIdentifier>{37d83428-4e82-48fe-a881-fe095a97f791}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -39,6 +45,12 @@
     <ClCompile Include="Exceptions\Erreur.cpp">
       <Filter>Fichiers sources\Exceptions</Filter>
     </ClCompile>
+    <ClCompile Include="IVisiteur.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="VisiteurClientSocket.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client\Client.h">
@@ -49,6 +61,12 @@
     </ClInclude>
     <ClInclude Include="Exceptions\Erreur.h">
       <Filter>Fichiers d%27en-tête\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="IVisiteur.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="VisiteurClientSocket.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

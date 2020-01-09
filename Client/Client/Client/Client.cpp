@@ -67,6 +67,7 @@ Client::~Client() {
 	std::cout << "Arrêt normal du client" << std::endl;
 }
 
+/* Remplacée par un visiteur 
 void Client::sendSocket(const std::string & req) {
 	int r;
 	r = send(sock, req.c_str(), (int)req.length(), 0);             //------------------ envoi de la requête au serveur -------------------------------
@@ -75,4 +76,8 @@ void Client::sendSocket(const std::string & req) {
 		throw Erreur("Échec de l'envoi de la requête");
 
 	std::cout << "Requête envoyée au serveur" << std::endl;
+}
+*/
+bool Client::accepte(IVisiteur* visiteur) {
+	return visiteur->visite(this);
 }

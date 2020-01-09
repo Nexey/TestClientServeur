@@ -122,12 +122,16 @@
     <ClCompile Include="Client\Client.cpp" />
     <ClCompile Include="Client\MaWinsock.cpp" />
     <ClCompile Include="Exceptions\Erreur.cpp" />
+    <ClCompile Include="IVisiteur.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="VisiteurClientSocket.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client\Client.h" />
     <ClInclude Include="Client\MaWinsock.h" />
     <ClInclude Include="Exceptions\Erreur.h" />
+    <ClInclude Include="IVisiteur.h" />
+    <ClInclude Include="VisiteurClientSocket.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
