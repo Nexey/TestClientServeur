@@ -33,7 +33,7 @@ Client::Client(const std::string & adresseServeur, const int portServeur) {
 		throw Erreur(oss.str().c_str());
 	}
 
-	std::cout << "Socket créé" << std::endl;
+	std::cout << "Socket créée" << std::endl;
 
 	//------------------------------ création du représentant du serveur ----------------------------------------
 
