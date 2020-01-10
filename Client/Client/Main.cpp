@@ -11,6 +11,5 @@ int main(int argc, char **argv) {
 
 	Client client("127.0.0.16", 10000);
 	IVisiteur * visiteur = new VisiteurClientSocket();
-	bool continuer = true;
-	while (continuer = client.accepte(visiteur));
+	while (client.accepte(visiteur));
 }
