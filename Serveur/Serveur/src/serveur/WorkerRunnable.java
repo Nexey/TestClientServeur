@@ -1,5 +1,6 @@
 package serveur;
 
+import experts.*;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -52,8 +53,14 @@ public class WorkerRunnable implements Runnable {
 			// Une fois la connexion finie d'une manière ou d'une autre, readLine() renvoit null. C'est aussi simple que ça
 			while (null != (inputLine = in.readLine())) {
 				// Si la connexion est rompue, readLine() renvoit juste un caractère vide non null. Ce if permet de le filtrer.
-				if (!inputLine.equals(""))
+				if (!inputLine.equals("")) {
 					System.out.println(this.chat(inputLine));
+					FormeCOR experts = new CercleCOR(
+							new TriangleCOR()
+							);
+					System.out.println(experts.gerer(inputLine));
+					// Gérer ici avec une chaîne d'expert
+				}
 			}
 			
 			// La connexion s'est terminée normalement
